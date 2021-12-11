@@ -1,0 +1,8 @@
+{
+  "amp_auth": {
+    "userPoolId": "",
+    "region": "",
+    "userPoolWebClientId": ""
+  },
+  "version": "1.0.0"
+}
