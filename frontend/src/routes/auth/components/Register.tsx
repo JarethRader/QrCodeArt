@@ -80,7 +80,7 @@ const Register = (props: Props) => {
     }
     // TODO: Add error prompts if registerErrors contains any items
 
-    const register = Auth.signUp({
+    Auth.signUp({
       username: fields.username,
       password: fields.password,
       attributes: {
