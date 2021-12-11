@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn";
 
 interface Props {
   onToken: React.Dispatch<React.SetStateAction<string | undefined>>;
+  setUser: React.Dispatch<React.SetStateAction<IUser | undefined>>;
 }
 
 const Authentication = (props: Props) => {
@@ -15,10 +16,17 @@ const Authentication = (props: Props) => {
   React.useEffect(() => {
     Auth.currentUserPoolUser()
       .then((user) => {
+        console.log(user);
         const token = user?.signInUserSession?.accessToken?.jwtToken;
         if (!token) return;
+        const userAttributes: IUser = {
+          user_id: user.attributes.sub,
+          username: user.attributes.preferred_username,
+          email: user.attributes.email,
+        };
         console.log("Got token!", token);
         props.onToken(token);
+        props.setUser(userAttributes);
       })
       .catch(() => console.log("No current user"));
   }, []);
@@ -35,6 +43,7 @@ const Authentication = (props: Props) => {
                 handleAuthError={handleAuthError}
                 togglePage={togglePage}
                 onToken={props.onToken}
+                setUser={props.setUser}
               />
             )}
             {/*  */}

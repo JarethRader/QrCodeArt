@@ -30,7 +30,8 @@ const AppProvider = () => {
 
 const App = () => {
   const { dispatch } = useApi();
-  const [token, setToken] = React.useState<string | undefined>("");
+  const [token, setToken] = React.useState<string | undefined>(undefined);
+  const [user, setUser] = React.useState<IUser | undefined>(undefined);
 
   React.useEffect(() => {
     token &&
@@ -54,9 +55,10 @@ const App = () => {
               <Route path="/art/*">
                 <Viewport />
               </Route>
+              {/* TODO: can add a 404 page | or a 404 page with a randomly selected piece of art */}
             </Switch>
           ) : (
-            <Authentication onToken={setToken} />
+            <Authentication onToken={setToken} setUser={setUser} />
           )}
         </React.Suspense>
       </Router>
