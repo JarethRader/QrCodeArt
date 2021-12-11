@@ -51,7 +51,9 @@ const VerificationModal = (props: IVerificationProps) => {
   return (
     <div>
       <div className="rounded-sm border-2 border-black bg-gray-100 shadow-lg">
-        <h1>Verify Email</h1>
+        <h1 className="text-center font-0bold text-white text-4xl bg-black w-full py-2">
+          Verify Email
+        </h1>
         <form action="" id="Verification-form">
           <input
             className="my-2 mx-8 py-1 px-2 border-2 border-gray-200 shadow-md"

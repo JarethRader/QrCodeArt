@@ -5,7 +5,7 @@ import Register from "./components/Register";
 import SignIn from "./components/SignIn";
 
 interface Props {
-  onToken: React.Dispatch<React.SetStateAction<string>>;
+  onToken: React.Dispatch<React.SetStateAction<string | undefined>>;
 }
 
 const Authentication = (props: Props) => {

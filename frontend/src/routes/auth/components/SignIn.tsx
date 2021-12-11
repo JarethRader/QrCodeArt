@@ -11,7 +11,7 @@ interface ISigninProps {
       }
     | undefined;
   togglePage: () => void;
-  onToken: React.Dispatch<React.SetStateAction<string>>;
+  onToken: React.Dispatch<React.SetStateAction<string | undefined>>;
 }
 
 const SignIn = (props: ISigninProps) => {
@@ -44,9 +44,9 @@ const SignIn = (props: ISigninProps) => {
         message: "Please enter a password",
       });
     }
-    // TODO: Add error prompts if signinErros contains any items
+    // TODO: Add error prompts if signinErrors contains any items
 
-    const user = Auth.signIn(fields.email, fields.password)
+    Auth.signIn(fields.email, fields.password)
       .then((resp) => {
         console.log("Sign in successful", resp);
         const token = resp?.signInUserSession?.accessToken?.jwtToken;
