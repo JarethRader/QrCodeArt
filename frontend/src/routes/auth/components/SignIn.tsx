@@ -68,7 +68,10 @@ const SignIn = (props: ISigninProps) => {
       <div>
         <div className="flex justify-center mt-2">
           <p className="mx-1 test-gray-200">Don't have an account?</p>
-          <button className="text-blue-500 hover:text-blue-700" onClick={props.togglePage}>
+          <button
+            className="text-blue-500 hover:text-blue-700 cursor-pointer"
+            onClick={props.togglePage}
+          >
             Sign Up
           </button>
         </div>

@@ -70,7 +70,7 @@ const Form = (props: IFormProps) => {
             <button
               type="submit"
               onClick={(e) => handleOnFormSubmit(e)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-sm shadow-lg focus:outline-none border-2 border-black"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-sm shadow-lg focus:outline-none border-2 border-black cursor-pointer"
             >
               Submit
             </button>

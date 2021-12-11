@@ -65,7 +65,7 @@ const VerificationModal = (props: IVerificationProps) => {
           <div>
             <p>Didn't receive a code?</p>
             <button
-              className="text-blue-500 hover:text-blue-700"
+              className="text-blue-500 hover:text-blue-700 cursor-pointer"
               onClick={(e) => resendConfirmationCode(e)}
             >
               Resend
@@ -78,7 +78,7 @@ const VerificationModal = (props: IVerificationProps) => {
               <button
                 type="submit"
                 onClick={handleOnSubmit}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-sm shadow-lg focus:outline-none border-2 border-black"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-sm shadow-lg focus:outline-none border-2 border-black cursor-pointer"
               >
                 Submit
               </button>

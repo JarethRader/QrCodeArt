@@ -114,7 +114,10 @@ const Register = (props: Props) => {
         <div>
           <div className="flex justify-center mt-2">
             <p className="mx-1 test-gray-200">Already have an account?</p>
-            <button className="text-blue-500 hover:text-blue-700" onClick={props.togglePage}>
+            <button
+              className="text-blue-500 hover:text-blue-700 cursor-pointer"
+              onClick={props.togglePage}
+            >
               Sign In
             </button>
           </div>
