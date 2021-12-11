@@ -1,8 +1,9 @@
 {
   "amp_auth": {
-    "userPoolId": "",
-    "region": "",
-    "userPoolWebClientId": ""
+    "userPoolId": "us-east-1_UktnoesuG",
+    "region": "us-east-1",
+    "userPoolWebClientId": "3l68750jqc20no2ibjhvni9j5v"
   },
+  "api": "https://40kvgarww5.execute-api.us-east-1.amazonaws.com",
   "version": "1.0.0"
 }

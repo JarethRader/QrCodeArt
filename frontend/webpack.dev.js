@@ -18,9 +18,9 @@ module.exports = merge(common, {
   },
   devServer: {
     historyApiFallback: true,
-    port: 3001,
+    port: 8080,
     devMiddleware: {
-      publicPath: "http://localhost:3001/",
+      publicPath: "http://localhost:8080/",
     },
   },
   resolve: {
@@ -33,9 +33,9 @@ module.exports = merge(common, {
       inject: true,
       template: path.join(__dirname, "assets/index.ejs"),
       filename: path.join(__dirname, "dist/index.html"),
-      title: "React AWS",
+      title: "QR Code Art",
       favicon: path.join(__dirname, "public/favicon.ico"),
-      url: "https://localhost:3001",
+      url: "https://localhost:8080",
       custom: {
         react_lib: "https://unpkg.com/react@17/umd/react.development.js",
         react_dom_lib: "https://unpkg.com/react-dom@17/umd/react-dom.development.js",

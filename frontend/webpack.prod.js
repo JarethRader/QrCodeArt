@@ -67,7 +67,7 @@ module.exports = merge(common, {
       inject: true,
       template: path.join(__dirname, "assets/index.ejs"),
       filename: path.join(__dirname, "dist/index.html"),
-      title: "React AWS",
+      title: "QR Code Art",
       favicon: path.join(__dirname, "public/favicon.ico"),
       url: "",
       custom: {
